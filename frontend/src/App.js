@@ -52,13 +52,13 @@ function App() {
   };
 
   return (
-    <div className="text-white min-h-screen font-sans">
+    <div className="bg-gray-900 text-white min-h-screen font-sans">
       <div className="container mx-auto p-4 sm:p-8">
         <header className="text-center mb-8 sm:mb-12">
-          <h1 className="text-4xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-            Menu Summarizer
+          <h1 className="text-5xl sm:text-7xl font-bold text-white tracking-tighter">
+            Restaurant Menu Summarizer
           </h1>
-          <p className="text-gray-400 mt-2 text-lg">Vložte URL a nechte si zobrazit denní menu v moderním kabátě.</p>
+          <p className="text-gray-200 mt-4 text-xl">Vložte URL a nechte si zobrazit denní menu v moderním kabátě.</p>
         </header>
 
         <main>
@@ -111,7 +111,11 @@ function App() {
                             </div>
                             {item.price != null && <p className="text-xl font-bold text-purple-400 flex-shrink-0">{item.price} Kč</p>}
                           </div>
-                          <div className="text-sm text-gray-400 mt-2">
+                          <div className="text-sm text-gray-400 mt-2 flex items-center gap-4">
+                            {item.calories && <span className="flex items-center gap-1">🔥 {item.calories} kcal</span>}
+                            {item.health_score && <span className="flex items-center gap-1">{[...Array(5)].map((_, i) => <span key={i} className={i < item.health_score ? 'text-green-400' : 'text-gray-600'}>●</span>)}</span>}
+                          </div>
+                          <div className="text-xs text-gray-500 mt-2">
                             {item.weight && <span>{item.weight} | </span>}
                             {item.allergens && item.allergens.length > 0 && <span>Alergeny: {item.allergens.join(', ')}</span>}
                           </div>
