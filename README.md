@@ -71,7 +71,7 @@ Tato aplikace slouží k extrakci, analýze a zobrazení denních menu z webový
 Aplikace používá kombinaci `axios` a `cheerio` místo plnohodnotného prohlížeče jako `Puppeteer`.
 
 *   **Důvod:** Rychlost a efektivita. `axios` pouze stáhne HTML obsah, `cheerio` ho bleskově naparsuje. Tento přístup je výrazně rychlejší a méně náročný na systémové prostředky než spouštění celé instance prohlížeče.
-*   **Nevýhoda:** Tento přístup selže na stránkách, které své menu vykreslují až pomocí JavaScriptu na straně klienta. Pro takové případy by bylo nutné použít `Puppeteer`, což by ale zpomalilo odezvu pro všechny dotazy.
+
 
 ### Volba cache: SQLite
 
@@ -84,4 +84,4 @@ Pro cachování byla zvolena jednoduchá souborová databáze SQLite.
 
 *   **Stránka není dostupná:** `axios` správně vyhodí chybu (např. 404 nebo timeout), kterou backend zachytí a vrátí na frontend srozumitelnou chybovou hlášku.
 *   **Menu je pouze obrázek:** Současné řešení si s tímto neporadí, protože analyzuje pouze textový obsah. Řešením by bylo rozšíření o OCR (Optical Character Recognition) model, který by dokázal číst text z obrázků.
-*   **Na stránce není denní menu:** AI je instruována, aby v takovém případě vrátila prázdné pole `menu_items`. Aplikace tento stav korektně zobrazí jako "nepodařilo se najít žádné menu".
+
