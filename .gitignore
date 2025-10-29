@@ -1,0 +1,17 @@
+# Dependencies
+/node_modules
+/frontend/node_modules
+
+# Environment variables
+.env
+
+# Database
+*.db
+
+# Build output
+/frontend/dist
+/public/dist
+/public/index.html
+
+# OS generated files
+.DS_Store
