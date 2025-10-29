@@ -13,6 +13,7 @@ Tato aplikace slouží k extrakci, analýze a zobrazení denních menu z webový
 *   **Filtrování alergenů:** Umožňuje interaktivně filtrovat zobrazená jídla podle alergenů.
 *   **Cachování:** Výsledky se ukládají do lokální SQLite databáze, aby se předešlo opakovaným a zbytečným dotazům.
 *   **Slack Bot (Volitelné):** Obsahuje připravenou integraci pro Slack. Po nastavení tokenů můžete posílat URL přímo botovi ve Slacku.
+*   **Webhooky:** Aplikace podporuje registraci webhooků pro notifikace o změně menu.
 
 ## Technologický stack
 
@@ -61,6 +62,23 @@ Tato aplikace slouží k extrakci, analýze a zobrazení denních menu z webový
 
 5.  **Otevřete aplikaci v prohlížeči:**
     *   Jděte na adresu `http://localhost:3000`.
+
+## Testovací URL
+
+Následující URL byly použity pro testování:
+
+*   https://jidelnasudop.cz/menu/
+*   https://www.restauracesatlava.cz/jidelni-listek/
+*   https://obedyvpraze.cz/jidelni-listek
+*   https://www.hospodalucerna.cz/denni-menu/
+*   https://www.fba.cz/poledni-menu/
+*   https://restaurace-nastruze.cz/poledni-menu/
+*   https://restauracekastrol.cz/denni-menu/
+*   https://www.restauraceandel.cz/denni-nabidka
+*   https://www.restrest.cz/denni-menu/
+*   https://restauraceabc.cz/denni-menu
+*   https://www.ukocourahk.cz/denni-menu/
+*   https://www.restauracestart.cz/denni-menu
 
 ---
 
